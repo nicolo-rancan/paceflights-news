@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - SpaceX launches informations</title>
+
+    <link rel="stylesheet" href="/style/home/home.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+  </head>
+  <body onload="initComponents()">
+    <!--<div onclick="triggerMenu()" class="hamburger">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+        <path
+          d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z"
+        />
+      </svg>
+    </div> -->
+    <div id="hamburger-wrapper">
+      <button
+        onclick="triggerMenu()"
+        id="hamburger"
+        class="hamburger hamburger--collapse"
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+
+    <div id="menu-wrapper">
+      <div id="menu">
+        <p>HOME</p>
+        <br />
+        <p>NEWS</p>
+        <br />
+        <p>EVENTS</p>
+        <br />
+        <p>BLOG</p>
+      </div>
+    </div>
+
+    <header>
+      <div id="intestation">
+        <h1>Spaceflights News</h1>
+        <p>Everything you need to know about space.<br />News, events, vehicles and much more!</p>
+      </div>
+      <div id="wallpaper"></div>
+      <div id="fader">
+        <div onclick="scrollIn('#middle')" class="wrapper">
+          <svg
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="128.000000pt"
+            height="128.000000pt"
+            viewBox="0 0 128.000000 128.000000"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" stroke="none">
+              <path
+                d="M240 835 l-65 -65 233 -233 232 -232 232 232 233 233 -65 65 c-35 36
+-69 65 -75 65 -5 0 -81 -71 -167 -157 l-158 -158 -158 158 c-86 86 -162 157
+-167 157 -6 0 -40 -29 -75 -65z"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <section id="middle">
+      <div class="theme">
+        <div id="what-we-do" class="intestation">
+          <div class="line vertical"></div>
+          <h2>WHAT WE DO</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illo rem minus maxime nam.
+            Repellendus vero, eius obcaecati nemo consectetur exercitationem tempora quam rem dolor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script/utils.js"></script>
+  </body>
+</html>

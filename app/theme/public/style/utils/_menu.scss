@@ -1,0 +1,97 @@
+#menu-wrapper {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  background: #333;
+  padding: 0 4em 0 4em;
+  transform: skewX(-4deg);
+  transform-origin: bottom right;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  #menu {
+    width: 100%;
+    height: 100%;
+    margin: 8em 0 2em 0;
+    transform: skewX(4deg);
+    background-color: #333;
+
+    p {
+      color: white;
+      font-size: 1.75rem;
+      font-weight: 200;
+      margin-bottom: 1em;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: 0.5s;
+      padding: 0.25em 0.75em;
+
+      &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        animation: 0.5s FillOut forwards;
+        transition: 0.5s;
+        width: 10%;
+        bottom: 0.25em;
+        left: 0.75em;
+        background-color: white;
+      }
+
+      &:hover {
+        transition: 0.5s;
+        color: black;
+      }
+
+      &:hover::before {
+        content: "";
+        position: absolute;
+        transition: 0.5s;
+        height: 2%;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        animation: 0.5s FillIn forwards;
+      }
+    }
+  }
+}
+
+@keyframes FillOut {
+  0% {
+    height: 100%;
+    width: 100%;
+  }
+  50% {
+    height: 2%;
+    width: 100%;
+  }
+  100% {
+    height: 2%;
+    width: 10%;
+    color: white;
+  }
+}
+
+@keyframes FillIn {
+  0% {
+    width: 10%;
+    height: 2%;
+  }
+
+  50% {
+    width: 100%;
+    height: 2%;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    color: black;
+  }
+}

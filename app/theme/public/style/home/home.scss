@@ -1,0 +1,138 @@
+@import "../utils/commons";
+@import "../utils/hamburgerSettings";
+@import "../utils/hamburgers/hamburgers.scss";
+
+body {
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  #hamburger-wrapper {
+    z-index: 20;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+  }
+
+  @import "../utils/menu";
+
+  header {
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    #intestation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75%;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        color: white;
+        filter: drop-shadow(6px 6px rgba(0, 0, 0, 0.25));
+        font-size: 4.5rem;
+        font-weight: 900;
+        margin: auto auto 0 150px;
+      }
+      p {
+        color: white;
+        filter: drop-shadow(3px 3px rgba(0, 0, 0, 0.25));
+        font-size: 1.3rem;
+        font-weight: 300 !important;
+        line-height: 24px;
+        margin: 15px auto auto 150px;
+      }
+    }
+    #wallpaper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url("/resources/wall-2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    #fader {
+      width: 100%;
+      height: 25%;
+      bottom: 0;
+      background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+      position: absolute;
+      z-index: -1;
+      display: flex;
+      .wrapper {
+        margin: auto auto 3.5em auto;
+        cursor: pointer;
+        &:hover > svg {
+          opacity: 0.75;
+          transition: 0.25s;
+        }
+        svg {
+          animation: 1.5s Levitate infinite;
+          width: 30px;
+          height: 30px;
+          fill: white;
+          transition: 0.25s;
+        }
+      }
+    }
+  }
+
+  section {
+    height: 200vh;
+    background-color: black;
+
+    .theme {
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+
+      .intestation {
+        transform: translateY(-20px);
+        opacity: 0;
+        .line {
+          margin: 100px auto 25px auto;
+        }
+
+        h2 {
+          margin: 0.5em auto 0 auto;
+          text-align: center;
+          color: white;
+          font-size: 1.75rem;
+          font-weight: 300;
+        }
+
+        p {
+          margin: 25px auto 0 auto;
+          text-align: center;
+          font-size: 1.15rem;
+          font-weight: 200;
+          max-width: 800px;
+          color: white;
+          line-height: 24px;
+        }
+      }
+      .trigger-anim {
+        transition: 1s;
+        opacity: 1;
+        transform: translateY(20px);
+      }
+    }
+  }
+}
+
+@keyframes Levitate {
+  0% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(33%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
